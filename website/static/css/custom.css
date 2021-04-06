@@ -21,3 +21,77 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+/*desativando título na header*/
+
+.fixedHeaderContainer header .headerTitleWithLogo {
+    display: none;
+    font-size: 1.25em;
+    line-height: 18px;
+    margin: 0;
+    position: relative;
+    z-index: 9999;
+}
+
+/*Logo da neader*/
+
+.fixedHeaderContainer header img {
+    height: 50px;
+    margin-right: 10px;
+    border-style: none;
+    box-sizing: content-box;
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+/*header*/
+
+.fixedHeaderContainer {
+    background: #1a2733f3;
+    color: #fff;
+    min-height: 70px;
+    padding: 8px 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    transform: translate3d(0, 0, 0);
+    align-content: center;
+}
+
+/*header em telas menores*/
+
+.navigationSlider .slidingNav {
+    bottom: auto;
+    box-sizing: border-box;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 15px;
+}
+
+/*menu de navegação da header*/
+
+.fixedHeaderContainer header {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    text-align: left;
+}
+
+/*Botões de navegação da header*/
+
+.navigationSlider .slidingNav ul li a {
+    align-items: center;
+    box-sizing: border-box;
+    color: #1A2733;
+    color: inherit;
+    display: flex;
+    font-size: 0.9em;
+    height: auto;
+    height: 50px;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s;
+    
+}
