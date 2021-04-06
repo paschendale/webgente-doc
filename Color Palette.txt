@@ -1,0 +1,9 @@
+#000000 - Black
+#3E454D
+#1A2733
+#273A4D
+#7C8A99
+
+
+primaryColor: '#1A2733',
+secondaryColor: '#273A4D'
