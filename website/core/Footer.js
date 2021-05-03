@@ -29,6 +29,8 @@ class Footer extends React.Component {
               />
             )}
           </a>
+
+
           <div>
             <h5>Docs</h5>
             <a href={this.docUrl('doc1.html')}>
@@ -39,6 +41,8 @@ class Footer extends React.Component {
               API Reference (or other categories)
             </a>
           </div>
+
+
           <div>
             <h5>Community</h5>
             <a href={`${this.props.config.baseUrl}users`}>User Showcase</a>
@@ -56,6 +60,8 @@ class Footer extends React.Component {
               Twitter
             </a>
           </div>
+
+
           <div>
             <h5>More</h5>
             <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
@@ -93,9 +99,21 @@ class Footer extends React.Component {
               </div>
             )}
           </div>
-        </section>
 
-        <a
+
+        </section>
+        
+        
+        <section className="copyright">{this.props.config.copyright}</section>
+      </footer>
+    );
+  }
+}
+
+module.exports = Footer;
+
+/* Para adicionar logo no footer
+<a
           href="https://opensource.facebook.com/"
           target="_blank"
           rel="noreferrer noopener"
@@ -106,11 +124,4 @@ class Footer extends React.Component {
             width="170"
             height="45"
           />
-        </a>
-        <section className="copyright">{this.props.config.copyright}</section>
-      </footer>
-    );
-  }
-}
-
-module.exports = Footer;
+        </a>*/

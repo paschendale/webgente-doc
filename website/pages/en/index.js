@@ -35,13 +35,33 @@ class HomeSplash extends React.Component {
       </div>
     );
 
+
+/* Cabeçalho da página inicial */
+
+    const ProjectHeader = () => (
+      <div
+        id = "projectheader"
+        className="projectheader"
+        style={{textAlign: 'center'}}>
+        <img src="/img/2.svg" id="img1padding"></img>
+        <br/>
+        <img src="/img/1.svg"></img>
+        <h2>Acesse através dos links abaixo:</h2>
+      </div>
+    );
+
+/*
     const ProjectTitle = (props) => (
       <h2 className="projectTitle">
         {props.title}
         <small>{props.tagline}</small>
       </h2>
     );
-    
+
+    Usar isso no return --> <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} /> */
+
+
+
     const PromoSection = (props) => (
       <div className="section promoSection">
         <div className="promoRow">
@@ -58,14 +78,15 @@ class HomeSplash extends React.Component {
       </div>
     );
 
+    /* exemplo de botão para acessar página <Button href={docUrl('doc1.html')}>Example Link</Button>*/
+
     return (
       <SplashContainer>
         <div className="inner">
-          <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
+          <ProjectHeader />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+            <Button href="https://webgente.bomdespacho.mg.gov.br/">WebGENTE Bom Despacho</Button>
+            <Button href="https://webgente.bomdespacho.mg.gov.br/">WebGENTE Jacobina</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -91,6 +112,45 @@ class Index extends React.Component {
       </Container>
     );
 
+
+
+/* Configurações da página inicial */
+
+/*Botões*/
+    
+const Button = (props) => (
+  <div className="pluginWrapper buttonWrapper">
+    <a className="button" href={props.href} target={props.target}>
+      {props.children}
+    </a>
+  </div>
+);
+
+/*
+    const Features = () => (
+      <Block layout="fourColumn">
+        {[
+          {
+            content: 'O WebGENTE foi construído para se adequar a todos os tamanhos de tela, trazendo maior acessibilidade e agilidade para o uso cotidiano',
+            image: `${baseUrl}img/responsive.svg`,
+            imageAlign: 'top',
+            title: 'Responsividade',
+          },
+          {
+            content: 'Sem segredos! A interface amigável do WebGENTE permite que qualquer um possa acessar a aplicação e usá-la sem dificuldades',
+            image: `${baseUrl}img/code.svg`,
+            imageAlign: 'top',
+            title: 'Facilidade',
+          },
+        ]}
+      </Block>
+    );
+
+*/
+
+
+
+/*
     const FeatureCallout = () => (
       <div
         className="productShowcaseSection paddingBottom"
@@ -99,6 +159,29 @@ class Index extends React.Component {
         <MarkdownBlock>These are features of this project</MarkdownBlock>
       </div>
     );
+*/
+
+
+
+
+    const LearnHow = () => (
+      <Block background="light">
+        {[
+          {
+            content:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra sapien at lorem lobortis, eget viverra ante sagittis. Sed quis est ut felis sollicitudin tempus. Sed lacinia sit amet libero pulvinar convallis. Morbi et orci aliquet, finibus neque id, imperdiet velit. Mauris sodales dictum velit eu faucibus. Phasellus quis blandit lacus, et euismod quam. Donec quis semper libero. In laoreet elit ac lorem faucibus finibus.',
+            image: `${baseUrl}img/MOCKPC2.png`,
+            imageAlign: 'right',
+            title: 'Sobre o WebGENTE',
+          },
+        ]}
+      </Block>
+    );
+
+
+
+
+
 
     const TryOut = () => (
       <Block id="try">
@@ -108,61 +191,48 @@ class Index extends React.Component {
               'To make your landing page more attractive, use illustrations! Check out ' +
               '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
               'The illustrations you see on this page are from unDraw.',
-            image: `${baseUrl}img/undraw_code_review.svg`,
+            image: `${baseUrl}img/code2.svg`,
             imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
+            title: 'Desenvolvimento',
           },
         ]}
       </Block>
     );
+
+
+
+
+
 
     const Description = () => (
       <Block background="dark">
         {[
           {
             content:
-              'This is another description of how this project is useful',
-            image: `${baseUrl}img/undraw_note_list.svg`,
+              'O GENTE - Grupo de Engenharia para Gestão Territorial é um grupo de pesquisa que desenvolve projetos de engenharia relacionados à gestão do território. Composto por professores, pesquisadores e estudantes do Departamento de Engenharia Civil da Universidade Federal de Viçosa.',
+            image: `${baseUrl}img/logogente1.svg`,
             imageAlign: 'right',
-            title: 'Description',
+            title: 'Sobre o Grupo',
           },
         ]}
       </Block>
     );
 
-    const LearnHow = () => (
-      <Block background="light">
-        {[
-          {
-            content:
-              'Each new Docusaurus project has **randomly-generated** theme colors.',
-            image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
-            imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
-          },
-        ]}
-      </Block>
+  
+   /*Teste de divisão da página inicial */
+
+    const Sitegente = () => (
+      <div
+        className="sitegente"
+        style={{textAlign: 'center'}}>
+        <h2>Acesse nosso site!</h2>
+        <Button href="https://webgente.bomdespacho.mg.gov.br/">SITE GENTEUFV</Button>
+      </div>
     );
 
-    const Features = () => (
-      <Block layout="fourColumn">
-        {[
-          {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/undraw_react.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
-          },
-          {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/undraw_operating_system.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
-          },
-        ]}
-      </Block>
-    );
+   
 
+    /*
     const Showcase = () => {
       if ((siteConfig.users || []).length === 0) {
         return null;
@@ -192,17 +262,16 @@ class Index extends React.Component {
         </div>
       );
     };
+*/
 
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Features />
-          <FeatureCallout />
           <LearnHow />
           <TryOut />
-          <Description />
-          <Showcase />
+          <Description /> 
+          <Sitegente />        
         </div>
       </div>
     );

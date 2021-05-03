@@ -95,3 +95,70 @@
     transition: background-color 0.3s;
     
 }
+
+/*Body background*/
+
+body {
+
+    background-color: rgb(255, 255, 255);
+    vertical-align: center;
+}
+
+/*Alterações na página inicial*/
+
+.background1 {
+    background-color: #1A2733;
+}
+
+.darkBackground {
+    background: #1A2733 ;
+    color: #fff;
+}
+
+.lightBackground {
+    width: 100%;
+    background: url(../img/bg-1.png),
+                url(../img/bg-2.png);
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.container .wrapper .imageAlignSide p {
+    margin: 0;
+    margin-bottom: 40px;
+    max-width: 560px;
+    text-align: center;
+}
+
+#projectheader{
+    width: 100%;
+    padding: 10px;
+}
+
+#img1padding {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.button {
+    border: 1px solid #1A2733;
+    border-radius: 3px;
+    color: #1A2733;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2em;
+    padding: 10px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s;
+    margin: 10px;
+    
+}
+
+
+
+
+
+
+
